@@ -1,0 +1,26 @@
+.container {
+  background-color: var(--bage);
+  display: flex;
+  padding: 1rem;
+  font-size: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+
+  & .logo {
+    & img {
+      width: 150px;
+    }
+  }
+
+  & nav {
+    display: flex;
+    gap: 1.5rem;
+
+    & a {
+      text-decoration: none;
+      color: var(--azul);
+    }
+  }
+}
+
+
