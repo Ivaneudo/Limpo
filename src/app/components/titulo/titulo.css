@@ -1,6 +1,25 @@
 h1 {
   color: var(--bage);
   border-bottom: 5px solid var(--bage);
-  width: 280px;
-  margin-bottom: 1rem;
+  width: 300px;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+
+  /* 📱 TABLET */
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 280px;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* 📱 CELULAR */
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    border-bottom-width: 4px;
+    margin-bottom: 1.2rem;
+  }
 }

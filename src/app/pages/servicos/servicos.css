@@ -1,14 +1,20 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: var(--background);
-  padding: 7rem 1rem;
+  padding: 7rem 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
 
-  & p {
-    margin-bottom: 1rem;
-    font-size: 1.2em;
+  & > p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 900px;
+    text-align: justify;
   }
 
   & .servicos {
@@ -16,20 +22,159 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 1rem 0;
 
     & .section {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+
       & img {
         width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       & ul {
-        width: 300px;
+        width: 350px;
         list-style: none;
-        margin: 1rem -1rem 0 1rem;
+        padding: 0;
 
         & li {
-          font-size: 1.2em;
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #333;
+          position: relative;
+          padding-left: 1.2rem;
+
+          &::before {
+            content: "•";
+            color: var(--bage);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+          }
+
+          & b {
+            color: var(--azul);
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      /* Alterna a ordem em seções específicas */
+      &:first-child {
+        & ul {
+          order: 2;
+        }
+        & img {
+          order: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        & ul {
+          order: 1;
+        }
+        & img {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  /* 📱 TABLET GRANDE (até 1024px) */
+  @media (max-width: 1024px) {
+    padding: 7rem 1.5rem 2rem;
+
+    & .servicos .section {
+      gap: 2rem;
+
+      & img {
+        width: 280px;
+      }
+
+      & ul {
+        width: 320px;
+
+        & li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  /* 📱 TABLET (até 768px) */
+  @media (max-width: 768px) {
+    padding: 8rem 1rem 2rem;
+
+    & > p {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    & .servicos .section {
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 1rem 0;
+
+      & img {
+        width: 100%;
+        max-width: 400px;
+        order: 1 !important; /* Força imagem sempre em cima */
+      }
+
+      & ul {
+        width: 100%;
+        max-width: 500px;
+        order: 2 !important; /* Força lista sempre embaixo */
+
+        & li {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+      }
+
+      /* Remove a alternância de ordem no mobile */
+      &:first-child ul,
+      &:nth-child(2) ul {
+        order: 2;
+      }
+
+      &:first-child img,
+      &:nth-child(2) img {
+        order: 1;
+      }
+    }
+  }
+
+  /* 📱 CELULAR (até 480px) */
+  @media (max-width: 480px) {
+    padding: 8rem 0.8rem 2rem;
+
+    & > p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    & .servicos .section {
+      gap: 1rem;
+
+      & img {
+        max-width: 280px;
+      }
+
+      & ul {
+        & li {
+          font-size: 0.95rem;
+          padding-left: 1rem;
         }
       }
     }

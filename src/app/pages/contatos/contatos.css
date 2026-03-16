@@ -7,14 +7,26 @@
   background-position: center 80px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
-  padding: 7rem 1rem 0 1rem;
+  width: 100%;
+  min-height: 100vh; /* mudado de height para min-height */
+  padding: 7rem 1rem 2rem 1rem; /* adicionado padding-bottom */
 
   & .formulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+  }
+
+  /* 📱 AJUSTES RESPONSIVOS */
+  @media (max-width: 768px) {
+    background-position: center 100px; /* Ajuste para navbar maior */
+    padding: 8rem 0.8rem 2rem 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    background-position: center 100px;
+    padding: 8rem 0.5rem 1.5rem 0.5rem;
   }
 }
