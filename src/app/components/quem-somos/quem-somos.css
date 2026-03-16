@@ -27,12 +27,6 @@
   }
 
   & .texts {
-    & h1 {
-      color: var(--bage);
-      border-bottom: 5px solid var(--bage);
-      width: 280px;
-      margin-bottom: 1rem;
-    }
     & p {
       text-align: justify;
       font-size: 1.5em;
