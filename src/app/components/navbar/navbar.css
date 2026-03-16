@@ -23,8 +23,35 @@
     & a {
       text-decoration: none;
       color: var(--azul);
+      position: relative;
+      padding: 0.2rem 0;
+      cursor: pointer;
+      
+      /* Cria o pseudo-elemento para o sublinhado */
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%; /* Começa do centro */
+        width: 0; /* Começa invisível */
+        height: 2px;
+        background-color: var(--azul);
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+      
+      /* Quando o link está ativo (rota atual) */
+      &.active {
+        &::after {
+          width: 100%;
+          left: 0; /* Expande para as bordas */
+        }
+      }
+      
+      /* Efeito hover opcional */
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }
-
-
