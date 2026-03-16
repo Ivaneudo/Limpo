@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Titulo } from "../titulo/titulo";
+import { Titulo } from '../../components/titulo/titulo';
 
 @Component({
   selector: 'app-quem-somos',

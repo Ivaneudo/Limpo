@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Titulo } from "../titulo/titulo";
-import { Topico } from "../topico/topico";
+import { Titulo } from '../../components/titulo/titulo';
+import { Topico } from '../../components/topico/topico';
 
 @Component({
   selector: 'app-servicos',
