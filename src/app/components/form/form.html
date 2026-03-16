@@ -1,18 +1,18 @@
 <div class="proposta">
   <form action="">
     <p>Para solicitar PROPOSTA COMERCIAL, preencha os campos abaixo.</p>
-    <input type="text" placeholder="Nome: " disabled/>
+    <app-inputs [type]="'text'" [placeholder]="'Nome:'"></app-inputs>
     <div class="colun">
       <div>
-        <input type="tel" placeholder="Telefone: " disabled/>
-        <input type="text" placeholder="Empresa: " disabled/>
+        <app-inputs [type]="'tel'" [placeholder]="'Telefone:'"></app-inputs>
+        <app-inputs [type]="'text'" [placeholder]="'Empresa:'"></app-inputs>
       </div>
       <div>
-        <input type="email" placeholder="E-mail: " disabled/>
-        <input type="text" placeholder="Cargo: " disabled/>
+        <app-inputs [type]="'email'" [placeholder]="'E-mail:'"></app-inputs>
+        <app-inputs [type]="'text'" [placeholder]="'Cargo:'"></app-inputs>
       </div>
     </div>
-    <input type="text" placeholder="Endereço da Empresa: " disabled/>
-    <button disabled>Enviar Solicitação de PROPOSTA COMECIAL</button>
+    <app-inputs [type]="'text'" [placeholder]="'Endereço da Empresa:'"></app-inputs>
+    <app-button [text]="'Enviar Solicitação de PROPOSTA COMECIA'"></app-button>>
   </form>
 </div>
