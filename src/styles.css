@@ -2,10 +2,18 @@
 :root {
   --bage: #B0A175;
   --azul: #0A0A2F;
+  --vidro: rgba(255, 255, 255, 0.2);
+  --verde: #038D16;
 }
 
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
 }
