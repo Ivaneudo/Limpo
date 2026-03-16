@@ -1,0 +1,31 @@
+.contatos {
+  background: var(--vidro);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 1em;
+  color: var(--azul);
+  max-width: 550px;
+  font-weight: bolder;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & .colun {
+      display: flex;
+      gap: 1rem;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

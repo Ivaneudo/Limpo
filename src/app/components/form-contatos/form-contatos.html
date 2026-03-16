@@ -1,0 +1,16 @@
+<div class="contatos">
+  <form action="">
+    <p>Preencha o formulário abaixo, em breve entraremos em contato</p>
+    <app-inputs [type]="'text'" [placeholder]="'Nome:'"></app-inputs>
+    <div class="colun">
+      <div>
+        <app-inputs [type]="'tel'" [placeholder]="'Telefone:'"></app-inputs>
+      </div>
+      <div>
+        <app-inputs [type]="'email'" [placeholder]="'E-mail:'"></app-inputs>
+      </div>
+    </div>
+    <app-textarea [name]="'msg'" [placeholder]="'Mensagem:'"></app-textarea>
+    <app-button [text]="'Enviar Solicitação de PROPOSTA COMECIA'"></app-button>
+  </form>
+</div>
