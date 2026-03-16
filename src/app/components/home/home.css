@@ -1,0 +1,23 @@
+.conteiner {
+  background-image: url('/assets/equipeUnica.png');
+  background-size: cover;
+  background-position: center 80px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  & .text {
+    font-size: 1em;
+    width: 40%;
+    color: #fff;
+
+    & .selo {
+      width: 220px;
+      margin-left: 100px;
+      margin-top: 50px;
+    }
+  }
+}
