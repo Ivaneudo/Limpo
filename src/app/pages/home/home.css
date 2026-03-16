@@ -7,17 +7,62 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 180px 1rem 2rem 1rem;
 
   & .text {
-    font-size: 1em;
     width: 40%;
     color: #fff;
+
+    & h1 {
+      font-size: 2.5rem;
+    }
 
     & .selo {
       width: 220px;
       margin-left: 100px;
       margin-top: 50px;
+    }
+  }
+
+  /* 📱 CELULAR - LAYOUT EMPILHADO */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 200px 1rem 2rem 1rem;
+
+    & .text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      & h1 {
+        font-size: 2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      & .selo {
+        width: 180px;
+        margin: 30px auto 0;
+        display: block;
+      }
+    }
+  }
+
+  /* 📱 CELULAR PEQUENO */
+  @media (max-width: 480px) {
+    padding: 180px 0.8rem 1.5rem 0.8rem;
+
+    & .text {
+      & h1 {
+        font-size: 1.6rem;
+      }
+
+      & .selo {
+        width: 140px;
+        margin-top: 20px;
+      }
     }
   }
 }

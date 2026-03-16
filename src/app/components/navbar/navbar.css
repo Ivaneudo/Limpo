@@ -32,25 +32,70 @@
         content: '';
         position: absolute;
         bottom: 0;
-        left: 50%; /* Começa do centro */
-        width: 0; /* Começa invisível */
+        left: 50%;
+        width: 0;
         height: 2px;
         background-color: var(--azul);
         transition: width 0.3s ease, left 0.3s ease;
       }
       
       /* Quando o link está ativo (rota atual) */
-      &.active {
-        &::after {
-          width: 100%;
-          left: 0; /* Expande para as bordas */
-        }
+      &.active::after {
+        width: 100%;
+        left: 0;
       }
       
-      /* Efeito hover opcional */
+      /* Efeito hover */
       &:hover::after {
         width: 100%;
         left: 0;
+      }
+    }
+  }
+
+  /* 📱 TABLET E CELULAR */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0.8rem;
+    width: 100%;
+
+    & .logo {
+      margin-bottom: 0.5rem;
+      
+      & img {
+        width: 130px;
+      }
+    }
+
+    & nav {
+      margin-right: 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & a {
+        font-size: 0.9em;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+  }
+
+  /* 📱 CELULAR PEQUENO */
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+
+    & .logo {
+      & img {
+        width: 110px;
+      }
+    }
+
+    & nav {
+      gap: 0.5rem;
+
+      & a {
+        font-size: 0.8em;
+        padding: 0.2rem 0.3rem;
       }
     }
   }
