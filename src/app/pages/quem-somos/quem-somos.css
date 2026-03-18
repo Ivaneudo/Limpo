@@ -153,7 +153,7 @@
 
   /* 📱 CELULAR PEQUENO (até 480px) */
   @media (max-width: 480px) {
-    padding: 8rem 0.8rem 2rem;
+    padding: 9rem 0.8rem 2rem;
 
     & .secao {
       gap: 1rem;
